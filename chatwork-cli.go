@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 	"os/user"
-	"io/ioutil"
 	"strings"
 
 	"github.com/codegangsta/cli"
+	chatwork "github.com/griffin-stewie/go-chatwork"
 	"github.com/hashicorp/hcl"
-	chatwork "github.com/yoppi/go-chatwork"
 )
 
 func main() {
@@ -19,9 +19,9 @@ func main() {
 	app.Usage = "chatwork-cli [message]"
 	app.Author = "Kentaro Kawano"
 	app.Email = "kawano.kentaro@synergy101.jp"
-	app.Flags = []cli.Flag {
-		cli.StringFlag {
-			Name: "roomid, r",
+	app.Flags = []cli.Flag{
+		cli.StringFlag{
+			Name:  "roomid, r",
 			Usage: "Room ID",
 		},
 	}
